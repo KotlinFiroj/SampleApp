@@ -31,6 +31,8 @@ class MainActivity : ComponentActivity() {
                     )*/
 
                     GraphScreen()
+
+                    //ChatWithBinding()
                 }
             }
         }

@@ -2,13 +2,11 @@ package com.example.sampleapp.presentation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
@@ -44,8 +42,10 @@ fun GraphScreen(
 
             is UiState.Success<*> -> {
                 Text(text = "Success")
-
                 val data = (itemsData as UiState.Success).data
+
+                ChatWithBinding(data, lable = "Year")
+
                 LazyColumn {
                     items(data.size) { item ->
                         Row {
@@ -55,6 +55,7 @@ fun GraphScreen(
                         }
                     }
                 }
+
             }
             is UiState.Error -> {
                 Text(text = "Error")
@@ -73,3 +74,4 @@ fun GraphScreen(
         }
     }
 }
+

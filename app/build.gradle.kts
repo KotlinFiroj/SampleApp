@@ -39,6 +39,12 @@ android {
     buildFeatures {
         compose = true
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
 }
 
 dependencies {
@@ -64,5 +70,6 @@ dependencies {
 
     implementation(libs.androidx.hilt.navigation.compose)
 
+    implementation(libs.mpandroidchart)
 
 }
